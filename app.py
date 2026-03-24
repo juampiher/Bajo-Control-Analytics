@@ -96,7 +96,7 @@ plantilla_df = pd.DataFrame({
     "cantidad": [2]
 })
 
-csv_plantilla = plantilla_df.to_csv(index=False).encode("utf-8")
+csv_plantilla = plantilla_df.to_csv(index=False, sep=";").encode("utf-8")
 
 st.download_button(
     label="Descargar plantilla modelo",
