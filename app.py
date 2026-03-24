@@ -13,7 +13,7 @@ usuarios = {
 # =========================
 # TITULO PRINCIPAL Y DESCRIPCION
 # =========================
-st.title("HOLAAAAAAAAAAAAAAAA")
+
 st.markdown(
     "<h1 style='text-align: center;'>📊 Bajo Control Analytics</h1>",
     unsafe_allow_html=True
