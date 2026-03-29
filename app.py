@@ -110,7 +110,7 @@ st.download_button(
 # =========================
 st.caption("Formato esperado del archivo")
 
-st.dataframe(plantilla_df, hide_index=True)
+st.dataframe(hide_index=True)
 
 # =========================
 # SUBIR ARCHIVO
