@@ -88,6 +88,7 @@ st.write("Subí tu archivo Excel o CSV")
 # =========================
 st.info("💡 Podés descargar una plantilla modelo para completar fácilmente.")
 
+# 👉 DataFrame VACÍO (para descargar)
 plantilla_df = pd.DataFrame(columns=[
     "fecha",
     "producto",
@@ -99,7 +100,7 @@ plantilla_df = pd.DataFrame(columns=[
 csv_plantilla = plantilla_df.to_csv(index=False, sep=";").encode("utf-8")
 
 st.download_button(
-    label="Descargar plantilla modelo",
+    label="📥 Descargar plantilla modelo",
     data=csv_plantilla,
     file_name="plantilla_bajo_control_analytics.csv",
     mime="text/csv"
@@ -108,10 +109,18 @@ st.download_button(
 # =========================
 # FORMATO ESPERADO DEL ARCHIVO
 # =========================
-st.caption("Formato esperado del archivo")
+st.caption("Ejemplo de cómo debe estar estructurado el archivo")
 
-st.dataframe(plantilla_df, hide_index=True)
+# DataFrame SOLO PARA MOSTRAR EL EJEMPLO
+df_ejemplo = pd.DataFrame([{
+    "fecha": "01/01/2026",
+    "producto": "amoladora",
+    "costo_unitario": 50000,
+    "precio_unitario": 80000,
+    "cantidad": 2
+}])
 
+st.dataframe(df_ejemplo, hide_index=True)
 # =========================
 # SUBIR ARCHIVO
 # =========================
