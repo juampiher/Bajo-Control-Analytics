@@ -88,13 +88,13 @@ st.write("Subí tu archivo Excel o CSV")
 # =========================
 st.info("💡 Podés descargar una plantilla modelo para completar fácilmente.")
 
-plantilla_df = pd.DataFrame({
+plantilla_df = pd.DataFrame(columns=[
     "fecha",
     "producto",
     "costo_unitario",
     "precio_unitario",
     "cantidad"
-})
+])
 
 csv_plantilla = plantilla_df.to_csv(index=False, sep=";").encode("utf-8")
 
